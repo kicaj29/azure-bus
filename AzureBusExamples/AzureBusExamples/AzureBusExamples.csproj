@@ -83,6 +83,10 @@
       <Project>{6f3da54e-11e0-4905-992f-5e2a0cd60533}</Project>
       <Name>GetStartedQueues.SendReceive</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GetStartedTopics.SendReceive\GetStartedTopics.SendReceive.csproj">
+      <Project>{2bb61b9f-62bb-4e88-9f8c-75db87b52c03}</Project>
+      <Name>GetStartedTopics.SendReceive</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

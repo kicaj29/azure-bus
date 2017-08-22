@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GetStartedQueues.SendReceive;
+using GetStartedTopics.SendReceive;
 
 namespace AzureBusExamples
 {
@@ -26,6 +27,16 @@ namespace AzureBusExamples
         private void button2_Click(object sender, EventArgs e)
         {
             Receiver.Receive();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Publisher.Publish();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Subscriber.Subscribe();
         }
     }
 }
