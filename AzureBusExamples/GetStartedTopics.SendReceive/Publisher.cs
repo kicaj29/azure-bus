@@ -12,8 +12,8 @@ namespace GetStartedTopics.SendReceive
     {
         public static void Publish()
         {
-            var connectionString = "Endpoint=sb://jacekkowalski1.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=HMbCAwsNnSu9KJId5TuHz8jzbzgbMzpSD4tJfABT2EE=";
-            var topicName = "firsttopic";
+            var connectionString = "Endpoint=sb://dn-cel-messagebus-devlocal.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=C29S/ccD2SOKT9HZzzdAuETt1x0Om25xIin6ecIbSPA=";
+            var topicName = "testtopic";
 
             var client = TopicClient.CreateFromConnectionString(connectionString, topicName);
             Customer c = new Customer();

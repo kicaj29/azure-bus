@@ -11,12 +11,12 @@ namespace GetStartedTopics.SendReceive
 {
     public class Subscriber
     {
-        public static void Subscribe()
+        public static void Subscribe(string subscription)
         {
-            var connectionString = "Endpoint=sb://jacekkowalski1.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=HMbCAwsNnSu9KJId5TuHz8jzbzgbMzpSD4tJfABT2EE=";
-            var queueName = "firsttopic";
+            var connectionString = "Endpoint=sb://dn-cel-messagebus-devlocal.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=C29S/ccD2SOKT9HZzzdAuETt1x0Om25xIin6ecIbSPA=";
+            var topicName = "testtopic";
 
-            var client = SubscriptionClient.CreateFromConnectionString(connectionString, queueName, "subscription1");
+            var client = SubscriptionClient.CreateFromConnectionString(connectionString, topicName, subscription, ReceiveMode.ReceiveAndDelete);
 
             string customerType = typeof(Customer).ToString();
             string storeType = typeof(Store).ToString(); ;

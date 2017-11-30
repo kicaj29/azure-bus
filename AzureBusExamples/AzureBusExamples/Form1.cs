@@ -36,7 +36,12 @@ namespace AzureBusExamples
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Subscriber.Subscribe();
+            Subscriber.Subscribe("Subscribe_one");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Subscriber.Subscribe("Subscribe_two");
         }
     }
 }
