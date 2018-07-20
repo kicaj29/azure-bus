@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using GetStartedTopics.Messages;
@@ -17,18 +18,19 @@ namespace GetStartedTopics.SendReceive
 
             var client = TopicClient.CreateFromConnectionString(connectionString, topicName);
             Customer c = new Customer();
-            c.Name = "Jacek";
+            c.Name = "Jacek1";
             c.Age = 18;
 
-            var message = new BrokeredMessage(c);
+            // var message = new BrokeredMessage(c, new DataContractSerializer(typeof(Customer)));
+            var message = new BrokeredMessage(c, new DataContractSerializer(typeof(Customer)));
             message.ContentType = typeof(Customer).ToString();
             client.Send(message);
 
             var store = new Store();
-            store.Name = "My store";
+            store.Name = "My store1";
             store.Address = "Address";
 
-            var message1 = new BrokeredMessage(store);
+            var message1 = new BrokeredMessage(store, new DataContractSerializer(typeof(Store)));
             message1.ContentType = typeof(Store).ToString();
             client.Send(message1);
         }

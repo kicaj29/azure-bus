@@ -25,6 +25,8 @@ namespace GetStartedTopics.SendReceive
             {
                 //Console.WriteLine(String.Format("Message body: {0}", message.GetBody<String>()));
 
+                Debug.WriteLine(subscription);
+
                 if (message.ContentType == customerType)
                 {
                     Customer cust = message.GetBody<Customer>();
